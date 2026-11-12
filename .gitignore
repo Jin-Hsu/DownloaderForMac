@@ -1,0 +1,32 @@
+# Dependencies and build output
+node_modules/
+dist/
+outputs/
+*.app/
+*.dmg
+*.zip
+
+# Local experiments and downloaded media
+work/
+coverage/
+
+# Local settings, credentials, and signing files
+.env
+.env.*
+!.env.example
+.npmrc
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Editor, OS, and log files
+.DS_Store
+._*
+.idea/
+.vscode/
+*.log
+
+# Local assistant context
+AGENTS.md
+USER_MEMORY.md

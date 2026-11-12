@@ -1,0 +1,30 @@
+{
+  "name": "media-harbor",
+  "version": "0.2.0",
+  "private": true,
+  "description": "Scan a web page and selectively download public media assets.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Jin-Hsu/DownloaderForMac.git"
+  },
+  "homepage": "https://github.com/Jin-Hsu/DownloaderForMac#readme",
+  "bugs": {
+    "url": "https://github.com/Jin-Hsu/DownloaderForMac/issues"
+  },
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "check": "node --check main.js && node --check preload.js && node --check renderer/app.js",
+    "package:mac": "electron-builder --mac dmg zip"
+  },
+  "devDependencies": {
+    "electron": "^37.2.6",
+    "electron-builder": "^26.0.12"
+  },
+  "build": {
+    "appId": "com.kasimir.mediaharbor",
+    "productName": "Media Harbor",
+    "files": ["main.js", "preload.js", "renderer/**/*", "package.json"],
+    "mac": { "category": "public.app-category.utilities" }
+  }
+}
