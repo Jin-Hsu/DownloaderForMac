@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Media Harbor</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main>
+    <header>
+      <div><span class="eyebrow">MEDIA HARBOR</span><h1>网页素材，一网打尽。</h1><p>粘贴网址，识别图片、GIF、视频与音频，再按需下载。</p></div>
+      <div class="legal">仅下载你有权使用的公开素材</div>
+    </header>
+    <section class="search-panel">
+      <input id="url" type="url" placeholder="输入网页地址，例如 https://example.com" autofocus>
+      <button id="scan">扫描素材</button>
+    </section>
+    <div id="message" class="message">准备就绪</div>
+    <section id="toolbar" class="toolbar hidden">
+      <div class="filters">
+        <button class="filter active" data-type="all">全部 <b id="count-all">0</b></button>
+        <button class="filter" data-type="image">图片 <b id="count-image">0</b></button>
+        <button class="filter" data-type="gif">GIF <b id="count-gif">0</b></button>
+        <button class="filter" data-type="video">视频 <b id="count-video">0</b></button>
+        <button class="filter" data-type="audio">音频 <b id="count-audio">0</b></button>
+      </div>
+      <div class="actions"><button id="select-visible" class="ghost">选择当前</button><button id="clear" class="ghost">清空选择</button><button id="download">下载所选 <span id="selected-count">0</span></button></div>
+    </section>
+    <section id="grid" class="grid"></section>
+    <section id="empty" class="empty"><div class="orb">↘</div><h2>素材会出现在这里</h2><p>有些网站需要登录或使用加密播放，可能无法直接识别。</p></section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
